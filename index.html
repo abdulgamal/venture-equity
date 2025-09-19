@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Venture Equity Capital - White-Glove Commercial Lending</title>
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary: #0d47a1;
+        --secondary: #ff6f00;
+        --light: #f8f9fa;
+        --dark: #343a40;
+        --success: #28a745;
+      }
+
+      body {
+        font-family: "Open Sans", sans-serif;
+        color: #333;
+        padding-top: 72px;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+      }
+
+      .navbar {
+        background-color: white;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 15px 0;
+      }
+
+      .navbar-brand {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        color: var(--primary);
+        font-size: 1.5rem;
+      }
+
+      .nav-link {
+        font-weight: 600;
+        color: var(--dark);
+        margin: 0 10px;
+      }
+
+      .nav-link:hover {
+        color: var(--primary);
+      }
+
+      .hero-section {
+        background: linear-gradient(
+            rgba(13, 71, 161, 0.8),
+            rgba(13, 71, 161, 0.9)
+          ),
+          url("https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1973&q=80");
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 100px 0;
+      }
+
+      .section-padding {
+        padding: 80px 0;
+      }
+
+      .section-title {
+        position: relative;
+        margin-bottom: 40px;
+        padding-bottom: 15px;
+      }
+
+      .section-title::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 60px;
+        height: 3px;
+        background-color: var(--secondary);
+      }
+
+      .bg-light-alt {
+        background-color: #f8fafc;
+      }
+
+      .process-step {
+        text-align: center;
+        padding: 30px 20px;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+        height: 100%;
+      }
+
+      .process-step:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+
+      .step-number {
+        width: 60px;
+        height: 60px;
+        background-color: var(--primary);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin: 0 auto 20px;
+      }
+
+      .benefit-card {
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+        height: 100%;
+      }
+
+      .benefit-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .benefit-card-header {
+        background-color: var(--primary);
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .benefit-card-body {
+        padding: 25px;
+      }
+
+      .benefit-list {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .benefit-list li {
+        margin-bottom: 10px;
+        padding-left: 25px;
+        position: relative;
+      }
+
+      .benefit-list li:before {
+        content: "\f00c";
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        color: var(--success);
+        position: absolute;
+        left: 0;
+      }
+
+      .btn-primary {
+        background-color: var(--primary);
+        border-color: var(--primary);
+        padding: 12px 30px;
+        font-weight: 600;
+      }
+
+      .btn-primary:hover {
+        background-color: #0b3d91;
+        border-color: #0b3d91;
+      }
+
+      .btn-outline-primary {
+        border-color: var(--primary);
+        color: var(--primary);
+        padding: 12px 30px;
+        font-weight: 600;
+      }
+
+      .btn-outline-primary:hover {
+        background-color: var(--primary);
+        color: white;
+      }
+
+      .service-card {
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+        height: 100%;
+      }
+
+      .service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .service-icon {
+        font-size: 2.5rem;
+        color: var(--primary);
+        margin-bottom: 20px;
+      }
+
+      footer {
+        background-color: var(--dark);
+        color: white;
+        padding: 60px 0 30px;
+      }
+
+      .footer-links h5 {
+        margin-bottom: 20px;
+        position: relative;
+        padding-bottom: 10px;
+      }
+
+      .footer-links h5::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 40px;
+        height: 2px;
+        background-color: var(--secondary);
+      }
+
+      .footer-links ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .footer-links li {
+        margin-bottom: 10px;
+      }
+
+      .footer-links a {
+        color: #ddd;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+
+      .footer-links a:hover {
+        color: white;
+        padding-left: 5px;
+      }
+
+      .contact-info {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .contact-info li {
+        margin-bottom: 15px;
+        padding-left: 30px;
+        position: relative;
+      }
+
+      .contact-info li i {
+        position: absolute;
+        left: 0;
+        top: 5px;
+        color: var(--secondary);
+      }
+
+      .copyright {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 20px;
+        margin-top: 30px;
+      }
+
+      /* Back to top button */
+      .back-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        background-color: var(--primary);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        opacity: 0;
+        transition: all 0.3s ease;
+        z-index: 1000;
+      }
+
+      .back-to-top.show {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Venture Equity Capital</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-primary ms-lg-3" href="#contact">Get Started</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-8 mx-auto text-center">
+            <h1 class="display-4 fw-bold mb-4">
+              Offering White-Glove Experience in Commercial Lending
+            </h1>
+            <p class="lead mb-5">
+              Venture Equity Capital delivers a premium, white-glove experience
+              for borrowers, CRE broker partners, and lenders—offering fast,
+              reliable access to commercial real estate and small business
+              financing of any size, asset class, or location across the U.S.
+            </p>
+            <div class="d-flex flex-wrap justify-content-center gap-3">
+              <a href="#contact" class="btn btn-lg btn-primary">Get Funded</a>
+              <a href="#services" class="btn btn-lg btn-outline-light"
+                >Our Services</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Financing Options Section -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-title text-center">
+              Comprehensive Financing Solutions
+            </h2>
+            <p class="lead">
+              We provide a wide range of financing options to meet your business
+              and commercial real estate needs
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="card-body text-center p-4">
+                <i class="fas fa-building fa-3x text-primary mb-3"></i>
+                <h4 class="card-title">Financing Options</h4>
+                <ul class="list-unstyled mt-3">
+                  <li class="mb-2">Commercial Mortgages</li>
+                  <li class="mb-2">Commercial loan refinances</li>
+                  <li class="mb-2">Cash-out refinances</li>
+                  <li class="mb-2">Small business loan</li>
+                  <li class="mb-2">Lease build-out loans</li>
+                  <li class="mb-2">Bridge</li>
+                  <li class="mb-2">SBA</li>
+                  <li class="mb-2">Term Loan</li>
+                  <li class="mb-2">Construction</li>
+                  <li>Construction to perm</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-4">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="card-body text-center p-4">
+                <i class="fas fa-chart-line fa-3x text-primary mb-3"></i>
+                <h4 class="card-title">Lending Programs</h4>
+                <ul class="list-unstyled mt-3">
+                  <li class="mb-2">30 to 45 Day Closings</li>
+                  <li class="mb-2">LTVs as high as 95% certain executions</li>
+                  <li class="mb-2">Refinance with Cash Out up to 80% LTV</li>
+                  <li class="mb-2">SBA Preferred Partner 45 Day Closings</li>
+                  <li class="mb-2">Interest Only/Fully Amortized/Hybrids</li>
+                  <li class="mb-2">Acquisition/Development/Construction</li>
+                  <li class="mb-2">Fix & Flip up to 90% LTC/100% of Rehab</li>
+                  <li>Business Loans and Lines of Credit</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-4">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="card-body text-center p-4">
+                <i class="fas fa-handshake fa-3x text-primary mb-3"></i>
+                <h4 class="card-title">Type of Partners</h4>
+                <ul class="list-unstyled mt-3">
+                  <li class="mb-2">Private Lenders</li>
+                  <li class="mb-2">Regional Banks</li>
+                  <li class="mb-2">Debt Funds</li>
+                  <li class="mb-2">National Banks</li>
+                  <li class="mb-2">Credit Unions</li>
+                  <li class="mb-2">Insurance Companies</li>
+                  <li class="mb-2">SBA 7(a) & 504</li>
+                  <li class="mb-2">Bridge Lenders</li>
+                  <li class="mb-2">Community Banks</li>
+                  <li>CDFI Lenders</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="section-padding bg-light-alt">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-title text-center">Our Streamlined Process</h2>
+            <p class="lead">
+              We've simplified the lending process to get you funded quickly and
+              efficiently
+            </p>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="process-step bg-white">
+              <div class="step-number">1</div>
+              <h4>Contact Us</h4>
+              <p>
+                Reach out for a consultation to discuss your financing needs and
+                goals.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="process-step bg-white">
+              <div class="step-number">2</div>
+              <h4>Submit Documentation</h4>
+              <p>
+                Provide the necessary financial documents for our team to
+                review.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="process-step bg-white">
+              <div class="step-number">3</div>
+              <h4>Professional Underwriting</h4>
+              <p>
+                Our experts analyze your financials and package your loan
+                application.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="process-step bg-white">
+              <div class="step-number">4</div>
+              <h4>Market Shopping</h4>
+              <p>
+                We leverage our network to find the best lending options for
+                your needs.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="process-step bg-white">
+              <div class="step-number">5</div>
+              <h4>Select the Right Lender</h4>
+              <p>
+                We present you with the best options and help you choose the
+                right fit.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="process-step bg-white">
+              <div class="step-number">6</div>
+              <h4>Collaborate for Closing</h4>
+              <p>
+                We guide you through the closing process to ensure a smooth
+                transaction.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-title text-center">Benefits for All Parties</h2>
+            <p class="lead">
+              Our approach creates value for borrowers, brokers, and lenders
+              alike
+            </p>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="benefit-card">
+              <div class="benefit-card-header">
+                <h4>Borrower Benefits</h4>
+              </div>
+              <div class="benefit-card-body">
+                <ul class="benefit-list">
+                  <li>Never any upfront fees.</li>
+                  <li>No application, administration, or processing fees.</li>
+                  <li>We underwrite, package, and distribute to lenders.</li>
+                  <li>Search hundreds of lenders at once.</li>
+                  <li>One point of contact to compare loan offers.</li>
+                  <li>Lending partners compete for your loan.</li>
+                  <li>Ensures best rates and term available in the market.</li>
+                  <li>Superior communication.</li>
+                  <li>Quotes within 24-72 hours.</li>
+                  <li>Ability to close loans faster.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="benefit-card">
+              <div class="benefit-card-header">
+                <h4>Broker Benefits</h4>
+              </div>
+              <div class="benefit-card-body">
+                <ul class="benefit-list">
+                  <li>Expert underwriting.</li>
+                  <li>Increased chances of closing.</li>
+                  <li>Close CRE transactions faster.</li>
+                  <li>Allows a deeper relationship with clients.</li>
+                  <li>Superior communication.</li>
+                  <li>Complete transparency.</li>
+                  <li>Reduce risk of losing deals.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mx-md-auto">
+            <div class="benefit-card">
+              <div class="benefit-card-header">
+                <h4>Lender Benefits</h4>
+              </div>
+              <div class="benefit-card-body">
+                <ul class="benefit-list">
+                  <li>Increase number of loan opportunities.</li>
+                  <li>Receive high-quality loan opportunities.</li>
+                  <li>Receive quality loan packages.</li>
+                  <li>Superior communication.</li>
+                  <li>Complete transparency.</li>
+                  <li>Expert pre-underwriting.</li>
+                  <li>Close more loan transactions.</li>
+                  <li>Increased sales team.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="section-padding bg-light-alt">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <h2 class="section-title">About Venture Equity Capital</h2>
+            <h3 class="h4 mb-4">A Smarter Approach to Lending</h3>
+            <p>
+              Venture Equity Capital was founded with one mission: to simplify
+              and accelerate access to business capital. We work with business
+              owners, commercial real estate brokers, and lenders to create
+              win-win financing solutions tailored to your goals.
+            </p>
+            <p>
+              With deep roots in commercial lending and underwriting, we
+              understand the challenges business owners face. That's why we
+              provide not just funding — but strategy. Our proprietary
+              <strong>credit memorandum services</strong> help businesses
+              present stronger loan packages, increasing approval rates and
+              lender confidence.
+            </p>
+
+            <h4 class="mt-5 mb-4">What Sets Us Apart:</h4>
+            <ul class="benefit-list">
+              <li>
+                <strong>Underwriting Expertise</strong> — We know what lenders
+                want to see
+              </li>
+              <li>
+                <strong>Transparent Process</strong> — No surprises, just clear
+                steps
+              </li>
+              <li>
+                <strong>Tech-Driven Efficiency</strong> — Speed without
+                sacrificing service
+              </li>
+              <li>
+                <strong>Nationwide Network</strong> — We partner with lenders
+                across the U.S.
+              </li>
+              <li>
+                <strong>Bespoke Support</strong> — You're not a number; you're a
+                client with goals
+              </li>
+            </ul>
+
+            <h4 class="mt-5 mb-4">We serve:</h4>
+            <div class="row">
+              <div class="col-sm-6">
+                <ul class="benefit-list">
+                  <li>Small to mid-sized business owners</li>
+                  <li>Commercial real estate investors</li>
+                </ul>
+              </div>
+              <div class="col-sm-6">
+                <ul class="benefit-list">
+                  <li>Brokers seeking funding partners</li>
+                  <li>Lenders seeking qualified borrowers</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="mt-5">
+              <p class="fw-bold">
+                Want to work with a capital partner who understands your
+                business?
+              </p>
+              <a href="#contact" class="btn btn-primary"
+                >Book a Free Consultation</a
+              >
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-5 mt-lg-0">
+            <img
+              src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1752&q=80"
+              alt="About Venture Equity Capital"
+              class="img-fluid rounded shadow"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section-padding">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-title text-center">Our Lending Solutions</h2>
+            <h3 class="h4">
+              Tailored Funding for Businesses and Commercial Real Estate
+              Projects
+            </h3>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card bg-white p-4 h-100">
+              <div class="text-center">
+                <i class="fas fa-building service-icon"></i>
+                <h4>Commercial Real Estate Loans</h4>
+              </div>
+              <p>
+                For acquisitions, refinancing, or development — across all asset
+                classes.
+              </p>
+              <ul class="benefit-list">
+                <li>
+                  Multifamily | Retail | Industrial | Office | Hospitality |
+                  Mixed-use
+                </li>
+                <li>Competitive rates and flexible terms</li>
+                <li>
+                  Bridge loans, construction loans, and permanent financing
+                </li>
+                <li>National reach</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card bg-white p-4 h-100">
+              <div class="text-center">
+                <i class="fas fa-store service-icon"></i>
+                <h4>Small Business Loans</h4>
+              </div>
+              <p>
+                Capital solutions for growing companies that generate $50K+
+                annually.
+              </p>
+              <ul class="benefit-list">
+                <li>
+                  Working capital, equipment financing, expansion, debt
+                  consolidation
+                </li>
+                <li>SBA loans, term loans, lines of credit</li>
+                <li>Fast approvals and funding timelines</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mx-md-auto">
+            <div class="service-card bg-white p-4 h-100">
+              <div class="text-center">
+                <i class="fas fa-file-alt service-icon"></i>
+                <h4>Credit Memorandum Services</h4>
+              </div>
+              <p>
+                We offer professional-grade credit memos that make your loan
+                package stand out.
+              </p>
+              <ul class="benefit-list">
+                <li>Strengthen your funding request</li>
+                <li>Streamline lender decision-making</li>
+                <li>
+                  Ideal for businesses lacking in-house underwriting
+                  capabilities
+                </li>
+                <li>
+                  Available as a standalone service for private loan funds
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-5">
+          <div class="col-lg-8 mx-auto text-center bg-light p-5 rounded">
+            <h3 class="mb-4">Not Sure What You Need?</h3>
+            <p class="mb-4">
+              We'll assess your business and help you find the right product —
+              fast.
+            </p>
+            <a href="#contact" class="btn btn-primary"
+              >Talk to a Lending Expert</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding bg-light-alt">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-title text-center">Let's Talk About Capital</h2>
+            <h3 class="h4">
+              Ready to get started? Have questions about our loan programs or
+              services?
+            </h3>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <div class="card shadow border-0">
+              <div class="card-body p-5">
+                <form>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="mb-3">
+                        <label for="fullName" class="form-label"
+                          >Full Name *</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="fullName"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="mb-3">
+                        <label for="businessName" class="form-label"
+                          >Business Name</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="businessName"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="mb-3">
+                        <label for="email" class="form-label">Email *</label>
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="email"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="mb-3">
+                        <label for="phone" class="form-label">Phone</label>
+                        <input type="tel" class="form-control" id="phone" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="loanType" class="form-label">Loan Type</label>
+                    <select class="form-select" id="loanType">
+                      <option selected>Select loan type</option>
+                      <option value="cre">Commercial Real Estate</option>
+                      <option value="small-business">Small Business</option>
+                      <option value="not-sure">Not Sure</option>
+                    </select>
+                  </div>
+
+                  <div class="mb-4">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea
+                      class="form-control"
+                      id="message"
+                      rows="5"
+                    ></textarea>
+                  </div>
+
+                  <div class="d-flex flex-wrap gap-3">
+                    <button type="submit" class="btn btn-primary">
+                      Submit Inquiry
+                    </button>
+                    <button type="button" class="btn btn-outline-primary">
+                      Schedule a Call
+                    </button>
+                  </div>
+                </form>
+
+                <hr class="my-5" />
+
+                <h4 class="mb-4">Submit Documents</h4>
+                <p class="mb-4">
+                  You can upload the following documents to expedite your
+                  application:
+                </p>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <ul class="benefit-list">
+                      <li>2025 Income Statement</li>
+                      <li>2025 Balance sheet</li>
+                      <li>2024 Business Tax Return</li>
+                      <li>2023 Business Tax Return</li>
+                      <li>2022 Business Tax Return</li>
+                    </ul>
+                  </div>
+                  <div class="col-md-6">
+                    <ul class="benefit-list">
+                      <li>2024 Personal Tax Return</li>
+                      <li>2023 Personal Tax Return</li>
+                      <li>2022 Personal Tax Return</li>
+                      <li>Personal Financial Statement</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="mt-4">
+                  <button class="btn btn-outline-primary">
+                    <i class="fas fa-upload me-2"></i>Upload Documents
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="row mt-5">
+              <div class="col-md-6">
+                <div class="card border-0 shadow-sm">
+                  <div class="card-body p-4">
+                    <h4 class="card-title mb-4">Contact Information</h4>
+                    <ul class="contact-info">
+                      <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <strong>Address:</strong><br />
+                        504 Fair Street SW Atlanta, GA 30313
+                      </li>
+                      <li>
+                        <i class="fas fa-phone"></i>
+                        <strong>Phone:</strong><br />
+                        706-244-6179
+                      </li>
+                      <li>
+                        <i class="fas fa-envelope"></i>
+                        <strong>Email:</strong><br />
+                        eric@vecapital.co
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="card border-0 shadow-sm h-100">
+                  <div class="card-body p-4">
+                    <h4 class="card-title mb-4">Business Hours</h4>
+                    <ul class="list-unstyled">
+                      <li class="mb-2">
+                        <strong>Monday - Friday:</strong> 9:00 AM - 6:00 PM
+                      </li>
+                      <li class="mb-2">
+                        <strong>Saturday:</strong> 10:00 AM - 2:00 PM
+                      </li>
+                      <li class="mb-2"><strong>Sunday:</strong> Closed</li>
+                    </ul>
+                    <div class="mt-4">
+                      <p>
+                        We respond to all inquiries within 24 hours during
+                        business days.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-4 mb-lg-0">
+            <h3 class="text-white mb-4">Venture Equity Capital</h3>
+            <p>
+              Delivering white-glove commercial lending experiences with speed,
+              transparency, and expertise.
+            </p>
+            <div class="d-flex gap-3 mt-4">
+              <a href="#" class="text-white"
+                ><i class="fab fa-linkedin-in fa-lg"></i
+              ></a>
+              <a href="#" class="text-white"
+                ><i class="fab fa-twitter fa-lg"></i
+              ></a>
+              <a href="#" class="text-white"
+                ><i class="fab fa-facebook-f fa-lg"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+            <div class="footer-links">
+              <h5>Quick Links</h5>
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 mb-4 mb-md-0">
+            <div class="footer-links">
+              <h5>Services</h5>
+              <ul>
+                <li><a href="#services">Commercial Real Estate Loans</a></li>
+                <li><a href="#services">Small Business Loans</a></li>
+                <li><a href="#services">Credit Memorandum Services</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="footer-links">
+              <h5>Contact Us</h5>
+              <ul>
+                <li><i class="fas fa-map-marker-alt me-2"></i> Atlanta, GA</li>
+                <li><i class="fas fa-phone me-2"></i> 706-244-6179</li>
+                <li><i class="fas fa-envelope me-2"></i> eric@vecapital.co</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center copyright">
+          <p class="mb-0">
+            &copy; 2023 Venture Equity Capital. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Back to top button
+      const backToTopButton = document.querySelector(".back-to-top");
+
+      window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 300) {
+          backToTopButton.classList.add("show");
+        } else {
+          backToTopButton.classList.remove("show");
+        }
+      });
+
+      backToTopButton.addEventListener("click", (e) => {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    </script>
+  </body>
+</html>
