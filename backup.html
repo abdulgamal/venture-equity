@@ -19,8 +19,6 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap"
       rel="stylesheet"
     />
-    <!-- EmailJS SDK -->
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <style>
       :root {
         --primary: #0d47a1;
@@ -296,19 +294,6 @@
 
       .back-to-top.show {
         opacity: 1;
-      }
-
-      /* Form messages */
-      .alert-success {
-        display: none;
-      }
-
-      .alert-danger {
-        display: none;
-      }
-
-      .form-loading {
-        display: none;
       }
     </style>
   </head>
@@ -811,58 +796,9 @@
 
         <div class="row">
           <div class="col-lg-8 mx-auto">
-            <!-- Success Message -->
-            <div
-              class="alert alert-success alert-dismissible fade show"
-              role="alert"
-              style="display: none"
-            >
-              <strong>Thank you!</strong> Your inquiry has been submitted
-              successfully. We'll contact you within 24 hours.
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="alert"
-                aria-label="Close"
-              ></button>
-            </div>
-
-            <!-- Error Message -->
-            <div
-              class="alert alert-danger alert-dismissible fade show"
-              role="alert"
-              style="display: none"
-            >
-              <strong>Error!</strong> There was a problem submitting your form.
-              Please try again or contact us directly at eric@vecapital.co
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="alert"
-                aria-label="Close"
-              ></button>
-            </div>
-
-            <!-- Loading Message -->
-            <div
-              class="alert alert-info form-loading"
-              role="alert"
-              style="display: none"
-            >
-              <div class="d-flex align-items-center">
-                <div
-                  class="spinner-border spinner-border-sm me-2"
-                  role="status"
-                >
-                  <span class="visually-hidden">Loading...</span>
-                </div>
-                Submitting your inquiry...
-              </div>
-            </div>
-
             <div class="card shadow border-0">
               <div class="card-body p-5">
-                <form id="contactForm">
+                <form action="eric@vecapital.co">
                   <div class="row">
                     <div class="col-md-6">
                       <div class="mb-3">
@@ -873,7 +809,6 @@
                           type="text"
                           class="form-control"
                           id="fullName"
-                          name="fullName"
                           required
                         />
                       </div>
@@ -887,7 +822,6 @@
                           type="text"
                           class="form-control"
                           id="businessName"
-                          name="businessName"
                         />
                       </div>
                     </div>
@@ -901,7 +835,6 @@
                           type="email"
                           class="form-control"
                           id="email"
-                          name="email"
                           required
                         />
                       </div>
@@ -909,25 +842,18 @@
                     <div class="col-md-6">
                       <div class="mb-3">
                         <label for="phone" class="form-label">Phone</label>
-                        <input
-                          type="tel"
-                          class="form-control"
-                          id="phone"
-                          name="phone"
-                        />
+                        <input type="tel" class="form-control" id="phone" />
                       </div>
                     </div>
                   </div>
 
                   <div class="mb-3">
                     <label for="loanType" class="form-label">Loan Type</label>
-                    <select class="form-select" id="loanType" name="loanType">
-                      <option value="" selected>Select loan type</option>
-                      <option value="Commercial Real Estate">
-                        Commercial Real Estate
-                      </option>
-                      <option value="Small Business">Small Business</option>
-                      <option value="Not Sure">Not Sure</option>
+                    <select class="form-select" id="loanType">
+                      <option selected>Select loan type</option>
+                      <option value="cre">Commercial Real Estate</option>
+                      <option value="small-business">Small Business</option>
+                      <option value="not-sure">Not Sure</option>
                     </select>
                   </div>
 
@@ -936,23 +862,53 @@
                     <textarea
                       class="form-control"
                       id="message"
-                      name="message"
                       rows="5"
                     ></textarea>
                   </div>
 
                   <div class="d-flex flex-wrap gap-3">
-                    <button
-                      type="submit"
-                      class="btn btn-primary"
-                      id="submitBtn"
-                    >
+                    <button type="submit" class="btn btn-primary">
                       Submit Inquiry
                     </button>
+                    <!-- <button type="button" class="btn btn-outline-primary">
+                      Schedule a Call
+                    </button> -->
                   </div>
                 </form>
 
                 <hr class="my-5" />
+
+                <!-- <h4 class="mb-4">Submit Documents</h4>
+                <p class="mb-4">
+                  You can upload the following documents to expedite your
+                  application:
+                </p>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <ul class="benefit-list">
+                      <li>2025 Income Statement</li>
+                      <li>2025 Balance sheet</li>
+                      <li>2024 Business Tax Return</li>
+                      <li>2023 Business Tax Return</li>
+                      <li>2022 Business Tax Return</li>
+                    </ul>
+                  </div>
+                  <div class="col-md-6">
+                    <ul class="benefit-list">
+                      <li>2024 Personal Tax Return</li>
+                      <li>2023 Personal Tax Return</li>
+                      <li>2022 Personal Tax Return</li>
+                      <li>Personal Financial Statement</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="mt-4">
+                  <button class="btn btn-outline-primary">
+                    <i class="fas fa-upload me-2"></i>Upload Documents
+                  </button>
+                </div> -->
               </div>
             </div>
 
@@ -994,6 +950,7 @@
                       <li class="mb-2">
                         <strong>Saturday - Sunday:</strong> Closed
                       </li>
+                      <!-- <li class="mb-2"><strong>Sunday:</strong> Closed</li> -->
                     </ul>
                     <div class="mt-4">
                       <p>
@@ -1020,6 +977,17 @@
               Delivering white-glove commercial lending experiences with speed,
               transparency, and expertise.
             </p>
+            <!-- <div class="d-flex gap-3 mt-4">
+              <a href="#" class="text-white"
+                ><i class="fab fa-linkedin-in fa-lg"></i
+              ></a>
+              <a href="#" class="text-white"
+                ><i class="fab fa-twitter fa-lg"></i
+              ></a>
+              <a href="#" class="text-white"
+                ><i class="fab fa-facebook-f fa-lg"></i
+              ></a>
+            </div> -->
           </div>
 
           <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
@@ -1071,9 +1039,6 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-      // Initialize EmailJS with your Public Key
-      emailjs.init("6JXggSfSScHjdEg7r");
-
       // Back to top button
       const backToTopButton = document.querySelector(".back-to-top");
 
@@ -1089,77 +1054,6 @@
         e.preventDefault();
         window.scrollTo({ top: 0, behavior: "smooth" });
       });
-
-      // EmailJS form handling
-      document
-        .getElementById("contactForm")
-        .addEventListener("submit", function (e) {
-          e.preventDefault();
-
-          // Show loading state
-          document.querySelector(".form-loading").style.display = "block";
-          document.getElementById("submitBtn").disabled = true;
-
-          // Hide any previous messages
-          document.querySelector(".alert-success").style.display = "none";
-          document.querySelector(".alert-danger").style.display = "none";
-
-          // Prepare template parameters
-          const templateParams = {
-            from_name: document.getElementById("fullName").value,
-            from_email: document.getElementById("email").value,
-            business_name:
-              document.getElementById("businessName").value || "Not provided",
-            phone: document.getElementById("phone").value || "Not provided",
-            loan_type:
-              document.getElementById("loanType").value || "Not specified",
-            message:
-              document.getElementById("message").value || "No message provided",
-            to_email: "eric@vecapital.co",
-            reply_to: document.getElementById("email").value,
-            date: new Date().toLocaleString(),
-          };
-
-          // Send email using EmailJS
-          emailjs
-            .send("service_zeex5aq", "template_ha0ui49", templateParams)
-            .then(
-              function (response) {
-                console.log("SUCCESS!", response.status, response.text);
-
-                // Show success message
-                document.querySelector(".alert-success").style.display =
-                  "block";
-                document.querySelector(".form-loading").style.display = "none";
-
-                // Reset form
-                document.getElementById("contactForm").reset();
-
-                // Scroll to success message
-                document
-                  .querySelector(".alert-success")
-                  .scrollIntoView({ behavior: "smooth" });
-
-                // Re-enable submit button
-                document.getElementById("submitBtn").disabled = false;
-              },
-              function (error) {
-                console.log("FAILED...", error);
-
-                // Show error message
-                document.querySelector(".alert-danger").style.display = "block";
-                document.querySelector(".form-loading").style.display = "none";
-
-                // Scroll to error message
-                document
-                  .querySelector(".alert-danger")
-                  .scrollIntoView({ behavior: "smooth" });
-
-                // Re-enable submit button
-                document.getElementById("submitBtn").disabled = false;
-              }
-            );
-        });
     </script>
   </body>
 </html>
